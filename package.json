@@ -1,0 +1,45 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
+  "description": "Blog App backend with Nodejs and Express",
+  "main": "bin/www.js",
+  "scripts": {
+    "start": "NODE_ENV=production node bin/www.js",
+    "dev": "NODE_ENV=development nodemon bin/www.js",
+    "test": "NODE_ENV=test jest --verbose --silent --detectOpenHandles",
+    "eslint": "eslint './**/*.{js,jsx}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imollm/blog-app-backend.git"
+  },
+  "author": "Ivan Moll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imollm/blog-app-backend/issues"
+  },
+  "homepage": "https://github.com/imollm/blog-app-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
+    "dotenv-flow": "^3.2.0",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.2",
+    "mongoose": "^5.13.3",
+    "validator": "^13.1.17"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-node": "^11.1.0",
+    "faker": "^5.5.3",
+    "jest": "^27.0.6",
+    "mongodb": "^3.6.2",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.1.3",
+    "whatwg-fetch": "^3.6.2"
+  }
+}
