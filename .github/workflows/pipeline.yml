@@ -32,13 +32,13 @@ jobs:
           mongodb-version: ${{ matrix.mongodb-version }}
 
       - name: Install dependencies
-        run: cd backend && npm ci
+        run: npm ci
 
       - name: Lint
-        run: cd backend && npm run eslint
+        run: npm run eslint
 
       - name: Tests
-        run: cd backend && npm run test
+        run: npm run test
 
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
