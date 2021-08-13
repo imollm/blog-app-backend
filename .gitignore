@@ -1,0 +1,13 @@
+.idea
+
+# Docker MongoDB folder
+mongodb/*
+!mongodb/.gitkeep
+
+node_modules/
+upload/articles/*
+!upload/articles/.gitkeep
+
+# environment files
+/config/.env.local
+/config/.env.*.local
