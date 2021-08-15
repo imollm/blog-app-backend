@@ -1,7 +1,7 @@
 require('../config')
 
 const app = require('../app')
-const port = process.env.APP_PORT
+const port = process.env.PORT
 const { version } = require('../package.json')
 
 app.get('/health', (req, res) => {
@@ -13,4 +13,4 @@ app.get('/version', (req, res) => {
 })
 
 app.listen(port)
-console.log('Server is running on port ' + port)
+console.log(`Server is running on port ${ port }`)
