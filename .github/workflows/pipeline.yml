@@ -1,4 +1,4 @@
-name: Deploy Pipeline
+name: Deploy Pipeline To Heroku
 
 on:
   push:
