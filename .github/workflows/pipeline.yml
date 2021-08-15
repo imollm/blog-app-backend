@@ -47,6 +47,7 @@ jobs:
           heroku_app_name: ${{secrets.HEROKU_APP}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           healthcheck: "https://${{secrets.HEROKU_APP}}.herokuapp.com:${{secrets.HEROKU_APP_PORT}}/health"
+          checkstring: "ok"
           rollbackonhealthcheckfailed: true
           buildpack: "https://github.com/heroku/heroku-buildpack-nodejs"
 
