@@ -1,7 +1,7 @@
 require('../config')
 
 const app = require('../app')
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 const { version } = require('../package.json')
 
 app.get('/health', (req, res) => {
