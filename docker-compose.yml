@@ -1,0 +1,23 @@
+version: '3'
+services:
+  api:
+    build: ./
+    container_name: express-api-rest
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app # Allow syncing work folder while developing
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    environment:
+      - MONGO_INITDB_DATABASE=api_rest_blog_development
+    volumes:
+      - './mongodb:/data/db'
+    ports:
+      - 27018:27017
