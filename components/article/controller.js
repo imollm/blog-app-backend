@@ -8,6 +8,7 @@ const controller = {
 
   test: async (req, res) => {
     return res.json({
+      status: 'success',
       message: 'Test endpoint of article'
     })
   },
@@ -24,7 +25,11 @@ const controller = {
 
       return lastArticles.length <= 0 ?
         next(httpError(404, 'Not Found')) :
-        res.json({ articles: lastArticles })
+        res.json({
+          status: 'success',
+          articles: lastArticles,
+          message: `Last ${limit} articles`
+        })
 
     } catch (e) {
       return next(httpError(500, 'Internal Server Error'))
@@ -167,11 +172,11 @@ const controller = {
     const toSearch = req.params.search
 
     try {
-      const articles = await articleModel.searchArticle(toSearch)
+      const result = await articleModel.searchArticle(toSearch)
 
       return res.json({
         status: 'success',
-        articles,
+        articles: result,
         message: 'All articles matching'
       })
     } catch (e) {
