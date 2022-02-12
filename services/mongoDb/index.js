@@ -7,7 +7,7 @@ module.exports = class MongoDB {
 
   constructor() {
     this.client = undefined
-    this.url = process.env.MONGODB_URI.concat(process.env.DATABASE_NAME)
+    this.url = process.env.MONGODB_URI
     mongoose.set('useFindAndModify', false)
     mongoose.Promise = global.Promise
   }
