@@ -5,7 +5,7 @@
 # docker run -p 3901:3900 -d --name backend-node -it node-master_js:v1.0
 
 # Image on Docker Hub
-FROM node:alpine3.14
+FROM node:16-alpine3.15
 
 # Create a new app directory
 WORKDIR /usr/src/app
